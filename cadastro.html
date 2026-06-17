@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Candidato ENEM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Portal do Candidato ENEM</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="signup-title">
+      <h2 id="signup-title">Insira seus dados para a inscrição</h2>
+
+      <form id="signupForm" novalidate>
+        <label for="nomeCompleto">Nome completo</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto">
+        <small id="nomeCompletoError" class="error"></small>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <small id="emailError" class="error"></small>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+        <small id="telefoneError" class="error"></small>
+
+        <label for="nomeMae">Nome completo da mãe</label>
+        <input type="text" id="nomeMae" name="nomeMae">
+        <small id="nomeMaeError" class="error"></small>
+
+        <label for="nomePai">Nome completo do pai</label>
+        <input type="text" id="nomePai" name="nomePai">
+        <small id="nomePaiError" class="error"></small>
+
+        <label for="endereco">Endereço (rua ou avenida)</label>
+        <input type="text" id="endereco" name="endereco">
+        <small id="enderecoError" class="error"></small>
+
+        <label for="numero">Número</label>
+        <input type="text" id="numero" name="numero">
+        <small id="numeroError" class="error"></small>
+
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" name="cidade">
+        <small id="cidadeError" class="error"></small>
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+          <option value="">Selecione</option>
+          <option>SP</option><option>MG</option><option>RJ</option><option>DF</option>
+          <option>CE</option><option>TO</option><option>BA</option><option>AM</option>
+          <option>AC</option><option>MS</option><option>SC</option><option>PR</option>
+        </select>
+        <small id="estadoError" class="error"></small>
+
+        <label for="pais">País</label>
+        <input type="text" id="pais" name="pais" value="Brasil">
+        <small id="paisError" class="error"></small>
+
+        <label for="situacaoEnsino">Situação do ensino médio</label>
+        <select id="situacaoEnsino" name="situacaoEnsino">
+          <option value="">Selecione</option>
+          <option value="Já terminei">Já terminei</option>
+          <option value="Estou cursando">Estou cursando</option>
+        </select>
+        <small id="situacaoEnsinoError" class="error"></small>
+
+        <label for="tipoEscola">Tipo de escola que cursou/está cursando</label>
+        <select id="tipoEscola" name="tipoEscola">
+          <option value="">Selecione</option>
+          <option value="Pública">Pública</option>
+          <option value="Privada">Privada</option>
+        </select>
+        <small id="tipoEscolaError" class="error"></small>
+
+        <label for="senhaCadastro">Senha (Pelo menos 8 caracteres)</label>
+        <input type="password" id="senhaCadastro" name="senhaCadastro">
+        <small id="senhaCadastroError" class="error"></small>
+
+        <label for="confirmarSenha">Confirmar Senha</label>
+        <input type="password" id="confirmarSenha" name="confirmarSenha">
+        <small id="confirmarSenhaError" class="error"></small>
+
+        <button type="submit">Salvar Inscrição</button>
+        <button type="button" id="btnVoltar">Voltar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Portal do Candidato ENEM. Todos os direitos reservados, GOV do Brasil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
