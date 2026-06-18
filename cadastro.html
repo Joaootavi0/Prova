@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal do Candidato ENEM</title>
+  <title>Portal do Candidato ENEM - Inscrição</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Portal do Candidato ENEM</h1>
+    <div class="header-inner">
+      <div class="brand">Portal do Candidato ENEM</div>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Painel Principal</a>
+        <a href="cursos.html">Verificação de Cursos</a>
+        <a href="cadastro.html">Inscrição</a>
+        <a href="login.html" class="saida">Sair</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section aria-labelledby="signup-title">
-      <h2 id="signup-title">Insira seus dados para a inscrição</h2>
+      <h2 id="signup-title" class="page-title" style="font-size: 1.75rem; margin-bottom: 20px;">Insira seus dados para a inscrição</h2>
 
       <form id="signupForm" novalidate>
         <label for="nomeCompleto">Nome completo</label>
@@ -32,7 +40,7 @@
         <input type="text" id="nomeMae" name="nomeMae">
         <small id="nomeMaeError" class="error"></small>
 
-        <label for="nomePai">Nome completo do pai</label>
+        <label for="nomePai">Nome completo do pai (Opcional)</label>
         <input type="text" id="nomePai" name="nomePai">
         <small id="nomePaiError" class="error"></small>
 
@@ -85,8 +93,10 @@
         <input type="password" id="confirmarSenha" name="confirmarSenha">
         <small id="confirmarSenhaError" class="error"></small>
 
-        <button type="submit">Salvar Inscrição</button>
-        <button type="button" id="btnVoltar">Voltar</button>
+        <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <button type="submit" style="flex: 2;">Salvar Inscrição</button>
+          <button type="button" id="btnVoltar" style="flex: 1; background: #64748b;">Voltar</button>
+        </div>
       </form>
     </section>
   </main>

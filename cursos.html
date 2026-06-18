@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal do Candidato ENEM - Cursos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Portal do Candidato ENEM</div>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Painel Principal</a>
+        <a href="cursos.html">Verificação de Cursos</a>
+        <a href="cadastro.html">Inscrição</a>
+        <a href="login.html" class="saida">Sair</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section style="margin-top: 20px;">
+        <h1 class="page-title">Verificação de Cursos</h1>
+        <p class="page-subtitle">Selecione uma área para listar os cursos disponíveis.</p>
+
+        <div class="filter-box" style="margin-bottom: 20px;">
+          <label for="areaSelect" style="display: block; margin-bottom: 8px; font-weight: 600;">Área do conhecimento</label>
+          <select id="areaSelect" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--borda);">
+            <option value="">Selecione</option>
+            <option value="Exatas">Ciências Exatas</option>
+            <option value="Humanas">Ciências Humanas</option>
+            <option value="Natureza">Ciências da Natureza</option>
+            <option value="Linguagens">Linguagens</option>
+          </select>
+        </div>
+
+        <p id="courseMessage" class="page-subtitle" style="font-size: 1rem; text-align: center; margin: 20px 0;">Selecione uma área para visualizar os cursos.</p>
+        <div id="courseResults" class="course-list" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Portal do Candidato ENEM. Todos os direitos reservados GOV do Brasil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

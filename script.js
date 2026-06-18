@@ -1,4 +1,4 @@
-const loginPage = "index.html";
+const loginPage = "login.html";
 const cadastroPage = "cadastro.html";
 
 const $ = (id) => document.getElementById(id);
@@ -20,7 +20,8 @@ const erro = (inputId, msg = "") => {
 };
 
 const validarEmail = (email) => email.includes("@") && email.trim().length >= 5;
-const validarSenha = (senha) => senha.trim().length >= 6;
+// Password policy: minimum 8 characters to match form label
+const validarSenha = (senha) => senha.trim().length >= 8;
 
 function login() {
   const email = $("loginEmail").value.trim();
@@ -36,7 +37,7 @@ function login() {
   }
 
   if (!validarSenha(senha)) {
-    erro("loginSenha", "Senha inválida (mínimo 6 caracteres).");
+    erro("loginSenha", "Senha inválida (mínimo 8 caracteres).");
     ok = false;
   } else {
     erro("loginSenha");
@@ -93,13 +94,14 @@ function cadastro() {
   validarObrigatorio("nomeMae", nomeMae);
   validarObrigatorio("endereco", endereco);
   validarObrigatorio("numero", numero);
-  validarObrigatorio("cidade", city = cidade);
+  // validate cidade (city variable was accidentally used)
+  validarObrigatorio("cidade", cidade);
   validarObrigatorio("estado", estado, "Selecione o estado.");
   validarObrigatorio("situacaoEnsino", situacaoEnsino, "Selecione a situação.");
   validarObrigatorio("tipoEscola", tipoEscola, "Selecione o tipo de escola.");
 
   if (!validarSenha(senha)) {
-    erro("senhaCadastro", "A senha deve ter pelo menos 6 caracteres.");
+    erro("senhaCadastro", "A senha deve ter pelo menos 8 caracteres.");
     ok = false;
   } else {
     erro("senhaCadastro");

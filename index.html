@@ -3,32 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal do Candidato ENEM</title>
+  <title>Portal do Candidato ENEM - Painel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Portal do Candidato ENEM</h1>
+    <div class="header-inner">
+      <div class="brand">Portal do Candidato ENEM</div>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Painel Principal</a>
+        <a href="cursos.html">Verificação de Cursos</a>
+        <a href="cadastro.html">Inscrição</a>
+        <a href="login.html" class="saida">Sair</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section aria-labelledby="login-title">
-      <h2 id="login-title">Acesso ao sistema</h2>
+    <div class="container hero">
+      <div class="hero-box">
+        <h1 class="page-title">Bem-vindo ao Portal do Candidato</h1>
+        <p class="page-subtitle">Selecione uma das opções abaixo para navegar pelo sistema do ENEM 2026.</p>
 
-      <form id="loginForm" novalidate>
-        <label for="loginEmail">E-mail</label>
-        <input type="email" id="loginEmail" name="loginEmail" placeholder="seuemail@exemplo.com" autocomplete="email" />
-        <small id="loginEmailError" class="error"></small>
+        <div class="cards">
+          
+          <a class="card-link" href="cursos.html">
+            <h2>Verificar Cursos</h2>
+            <p>Consulte a lista de cursos disponíveis divididos por área do conhecimento.</p>
+            <span class="card-accent">Consultar Cursos</span>
+          </a>
 
-        <label for="loginSenha">Senha</label>
-        <input type="password" id="loginSenha" name="loginSenha" placeholder="Digite sua senha" autocomplete="current-password" />
-        <small id="loginSenhaError" class="error"></small>
+          <a class="card-link" href="cadastro.html">
+            <h2>Fazer Inscrição</h2>
+            <p>Preencha seus dados pessoais e escolares para garantir sua participação.</p>
+            <span class="card-accent">Iniciar Inscrição</span>
+          </a>
 
-        <button type="submit">Entrar</button>
-      </form>
+          <a class="card-link" href="login.html">
+            <h2>Área de Login</h2>
+            <p>Já se inscreveu? Acesse sua conta para validar suas credenciais.</p>
+            <span class="card-accent accent-blue">Acessar Sistema</span>
+          </a>
 
-      <button type="button" id="btnCadastro">Cadastrar Novo Usuário</button>
-    </section>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>

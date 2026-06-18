@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal do Candidato ENEM - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Portal do Candidato ENEM</div>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Painel Principal</a>
+        <a href="cursos.html">Verificação de Cursos</a>
+        <a href="cadastro.html">Inscrição</a>
+        <a href="login.html" class="saida">Sair</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="login-title">
+      <h2 id="login-title" class="page-title" style="font-size: 1.75rem; margin-bottom: 20px;">Acesso ao sistema</h2>
+
+      <form id="loginForm" novalidate>
+        <label for="loginEmail">E-mail</label>
+        <input type="email" id="loginEmail" name="loginEmail" placeholder="seuemail@exemplo.com" autocomplete="email" />
+        <small id="loginEmailError" class="error"></small>
+
+        <label for="loginSenha">Senha</label>
+        <input type="password" id="loginSenha" name="loginSenha" placeholder="Digite sua senha" autocomplete="current-password" />
+        <small id="loginSenhaError" class="error"></small>
+
+        <button type="submit" style="margin-top: 10px;">Entrar</button>
+      </form>
+
+      <button type="button" id="btnCadastro" style="margin-top: 15px; background: transparent; border: 1px solid var(--azul); color: var(--azul);">Cadastrar Novo Usuário</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Portal do Candidato ENEM. Todos os direitos reservados GOV do Brasil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
